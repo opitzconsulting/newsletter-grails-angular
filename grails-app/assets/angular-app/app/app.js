@@ -3,10 +3,10 @@
 // nga = newsletter-grails-angular
 angular.module('nga', [
   'ngRoute',
-  'nga.view1',
-  'nga.view2',
+  'nga.customer',
+  'nga.newsletter',
   'nga.version'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider.otherwise({redirectTo: '/newsletter'});
 }]);
