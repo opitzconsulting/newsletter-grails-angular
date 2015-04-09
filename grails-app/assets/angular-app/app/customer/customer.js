@@ -10,7 +10,7 @@ angular.module('nga.customer', ['ngRoute'])
     }])
 
     .factory('Customer', ['$resource', function($resource) {
-        $resource('/api/customer/:custId');
+        $resource('/customer/:custId');
     }])
 
     .controller('CustomerCtrl', ['$resource', '$scope', function ($resource, $scope) {

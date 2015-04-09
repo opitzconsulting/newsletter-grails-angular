@@ -9,11 +9,15 @@ angular.module('nga.newsletter', ['ngRoute'])
         });
     }])
 
-    .factory('Newsletter', ['$resource', function ($resource) {
-        $resource('api/etc/newsletter/kunden')
+    .factory('Recipients', ['$resource', function ($resource) {
+        return $resource('api/etc/newsletter/kunden');
 
     }])
 
-    .controller('NewsletterCtrl', ['Newsletter', function (Newsletter) {
-
+    .controller('NewsletterCtrl', ['$scope', 'Recipients', function ($scope, Recipients) {
+        //$scope.recipients = Recipients.query(function (response) {});
+        $scope.recipients = [
+            {firstname: 'John', lastname: 'Doe', phone: 1233254, address: 'Somestreet, Someville 99', email: 'john.doe@doe.com'},
+            {firstname: 'Max', lastname: 'Mustermann', phone: 999888777, address: 'Musterstrasse 3, Musterstadt', email: 'max.mustermann@mail.com'}
+        ];
     }]);

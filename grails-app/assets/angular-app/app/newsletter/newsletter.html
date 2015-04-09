@@ -1,5 +1,13 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div class="well">
+
+    <div class="col-md-4">
+        <div ng-repeat="recipient in recipients">
+            <label>{{recipient.firstname}} {{recipient.lastname}}</label>
+        </div>
+    </div>
+
+    <div class="col-md-8">
+
+    </div>
+
+</div>
