@@ -20,4 +20,6 @@ angular.module('nga.newsletter', ['ngRoute'])
             {firstname: 'John', lastname: 'Doe', phone: 1233254, address: 'Somestreet, Someville 99', email: 'john.doe@doe.com'},
             {firstname: 'Max', lastname: 'Mustermann', phone: 999888777, address: 'Musterstrasse 3, Musterstadt', email: 'max.mustermann@mail.com'}
         ];
+
+        $scope.markdownData = '#Title \n * list element 1 \n * list element 2 \n\n **This is bold**';
     }]);
