@@ -8,15 +8,12 @@ import grails.converters.JSON
 @Transactional(readOnly = true)
 class CustomerController {
 
-    def index(Long id) {
-        if (id) {
-            render(view: "/index")
-        } else
-            redirect(action: "list")
+    def index() {
+        respond Customer.list(params), model:[customerCount: Customer.count()]
     }
 
-    def list() {
-        respond Customer.list(params), model:[customerCount: Customer.count()]
+    def show(Customer customer) {
+        respond customer
     }
 
     def sendmails() {
