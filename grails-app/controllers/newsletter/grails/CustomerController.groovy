@@ -8,14 +8,15 @@ import grails.converters.JSON
 @Transactional(readOnly = true)
 class CustomerController {
 
-    def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        respond Customer.list(params), model:[customerCount: Customer.count()]
+    def index(Long id) {
+        if (id) {
+            render(view: "/index")
+        } else
+            redirect(action: "list")
     }
 
-    def show(Customer customer) {
-        respond customer
-        //TODO: route to Angular-Details
+    def list() {
+        respond Customer.list(params), model:[customerCount: Customer.count()]
     }
 
     def sendmails() {
@@ -23,10 +24,5 @@ class CustomerController {
         session.recipients = params.checkMail.findAll {it.value}.keySet()
         render ([session.recipients, session.loggedUsername])
         //TODO: route to Angular-Sendmails
-    }
-
-    def getRecipients() {
-        def result = [username: session.loggedUsername, customers: session.recipients.collect {Customer.read(it)}] as JSON
-        render result
     }
 }
