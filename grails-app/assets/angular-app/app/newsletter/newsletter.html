@@ -7,16 +7,24 @@
     </div>
 
     <div class="col-md-10">
-        <div class="row">
+        <div ng-show="!editMode" ng-click="editMode = !editMode">
+            <div ng-bind-markdown="markdownData"></div>
+        </div>
+        <div ng-show="editMode" ng-blur="editMode = !editMode">
+            <textarea ui-markdown-editor="editorOptions" ng-model="markdownData"></textarea>
+            <button type="button" class="btn btn-primary" ng-click="editMode = !editMode">Ok</button>
+        </div>
+
+
+
+        <!--<div class="row">
             <div class="col-md-6 col-xs-12">
                 <textarea ui-markdown-editor="editorOptions" ng-model="markdownData"></textarea>
             </div>
             <div class="col-md-6 col-xs-12">
-                <div ng-bind-markdown="markdownData">
-
-                </div>
+                <div ng-bind-markdown="markdownData"></div>
             </div>
-        </div>
+        </div>-->
     </div>
 
 </div>

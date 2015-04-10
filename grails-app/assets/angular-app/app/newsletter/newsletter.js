@@ -4,7 +4,7 @@ angular.module('nga.newsletter', ['ngRoute'])
 
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/newsletter', {
-            templateUrl: 'newsletter/newsletter.html',
+            templateUrl: 'app/newsletter/newsletter.html',
             controller: 'NewsletterCtrl'
         });
     }])
@@ -15,6 +15,8 @@ angular.module('nga.newsletter', ['ngRoute'])
     }])
 
     .controller('NewsletterCtrl', ['$scope', 'Recipients', function ($scope, Recipients) {
+
+
         //$scope.recipients = Recipients.query(function (response) {});
         $scope.recipients = [
             {firstname: 'John', lastname: 'Doe', phone: 1233254, address: 'Somestreet, Someville 99', email: 'john.doe@doe.com'},

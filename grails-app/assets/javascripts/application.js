@@ -6,6 +6,7 @@
 // to create separate JavaScript files as needed.
 //
 //= require jquery-2.1.3.js
+//= require bootstrap
 //= require app/bower_components/angular/angular
 //= require app/bower_components/angular-resource/angular-resource
 //= require app/bower_components/angular-route/angular-route
@@ -20,7 +21,6 @@
 //= require app/customer/customer
 //= require app/newsletter/newsletter
 //= require app/components/directives
-//= require bootstrap
 //= require app/app
 //= require_tree .
 //= require_self

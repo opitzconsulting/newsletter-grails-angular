@@ -3,7 +3,7 @@
 angular.module('nga.customer', ['ngRoute'])
 
     .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/customer/:custId', {
+        $routeProvider.when('app/customer/:custId', {
             templateUrl: 'customer/customer.html',
             controller: 'CustomerCtrl'
         });
