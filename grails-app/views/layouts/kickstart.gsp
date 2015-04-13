@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="${session.'org.springframework.web.servlet.i18n.SessionLocaleResolver.LOCALE'}">
+<html lang="en" ng-app="nga">
 
 <head>
 	<title><g:layoutTitle default="${meta(name:'app.name')}" /></title>

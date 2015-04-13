@@ -17,13 +17,12 @@
 //= require nga/nga/bower_components/codemirror/mode/gfm/gfm
 //= require nga/nga/bower_components/codemirror/mode/markdown/markdown
 //= require nga/nga/lib/angular-markdown-editor/angular-markdown-editor
+//= require nga/nga/app
 //= require_tree nga/templates
 //= require nga/nga/customer/customer
 //= require nga/nga/newsletter/newsletter
 //= require nga/nga/components/directives
-//= require nga/nga/app
-//= require_tree .
-//= require_self
+//= require_self (1)
 
 
 

@@ -4,16 +4,19 @@ angular.module('nga.customer', ['ngRoute'])
 
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/customer/show/:custId', {
-            templateUrl: 'customer/customer.html',
+            templateUrl: 'customer.htm',
             controller: 'CustomerCtrl'
         });
     }])
 
     .factory('Customer', ['$resource', function($resource) {
-        $resource('/customer/:custId');
+        return $resource('/api/customer/:custId');
     }])
 
-    .controller('CustomerCtrl', ['$resource', '$scope', function ($resource, $scope) {
+    .controller('CustomerCtrl', ['$resource', '$scope', '$routeParams', 'Customer', function ($resource, $scope, $routeParams, Customer) {
+
+        $scope.customer = Customer.get({custId: $routeParams.custId}, function () {});
+        
         $scope.save = function () {
 
         };
@@ -21,4 +24,5 @@ angular.module('nga.customer', ['ngRoute'])
         $scope.remove = function () {
 
         };
+
     }]);

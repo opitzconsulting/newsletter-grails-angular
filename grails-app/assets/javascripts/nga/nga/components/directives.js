@@ -5,7 +5,7 @@ angular.module('nga.directives', [])
         function ($window) {
             return {
                 restrict: 'A',
-                templateUrl: 'components/templates/edit-buttons.html',
+                templateUrl: 'edit-buttons.htm',
                 replace: true,
                 transclude: true,
                 scope: true,

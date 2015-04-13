@@ -8,6 +8,7 @@ class UrlMappings {
         }
 
         "/"(controller: 'Customer', action: 'index')
+        "/newsletter"(view: "/newsletter")
         "500"(view:'/error')
         "404"(view:'/notFound')
     }

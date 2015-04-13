@@ -19,7 +19,6 @@ class CustomerController {
     def sendmails() {
         session.loggedUsername = (SecurityContextHolder.context.authentication.principal as User).username
         session.recipients = params.checkMail.findAll {it.value}.keySet()
-        render ([session.recipients, session.loggedUsername])
-        //TODO: route to Angular-Sendmails
+        redirect(url: "/newsletter")
     }
 }
