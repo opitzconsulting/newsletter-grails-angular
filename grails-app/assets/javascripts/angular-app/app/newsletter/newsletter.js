@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('nga.newsletter', ['ngRoute'])
+angular.module('angularApp.app.newsletter', ['ngRoute'])
 
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/newsletter', {

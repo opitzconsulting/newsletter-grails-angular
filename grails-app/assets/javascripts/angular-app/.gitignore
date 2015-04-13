@@ -1,7 +1,6 @@
 logs/*
 !.gitkeep
 node_modules/
-nga/bower_components/
-tmp
+app/bower_components/
 .DS_Store
 .idea

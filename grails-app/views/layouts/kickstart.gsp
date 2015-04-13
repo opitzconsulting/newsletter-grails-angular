@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="nga">
+<html lang="en" ng-app="angularApp.app">
 
 <head>
 	<title><g:layoutTitle default="${meta(name:'app.name')}" /></title>

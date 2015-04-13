@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('nga.customer', ['ngRoute'])
+angular.module('angularApp.app.customer', ['ngRoute'])
 
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/customer/show/:custId', {

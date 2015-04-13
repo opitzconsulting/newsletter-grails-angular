@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module('nga.directives', [])
+angular.module('angularApp.app.directives', [])
     .directive('editButtons', ['$window',
         function ($window) {
             return {
