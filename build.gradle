@@ -9,6 +9,8 @@ buildscript {
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
         classpath 'com.bertramlabs.plugins:asset-pipeline-gradle:2.1.1'
+
+        classpath "com.craigburke.angular:angular-template-asset-pipeline:2.0.7"
     }
 }
 
@@ -61,6 +63,8 @@ dependencies {
     compile "org.grails.plugins:hibernate"
     compile "org.grails.plugins:cache"
     compile "org.hibernate:hibernate-ehcache"
+
+    compile "com.craigburke.angular:angular-template-asset-pipeline:2.0.7"
 
     runtime "org.grails.plugins:asset-pipeline"
     runtime "org.grails.plugins:scaffolding"
