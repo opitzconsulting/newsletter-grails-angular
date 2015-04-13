@@ -17,7 +17,7 @@ class CustomerController {
     }
 
     def sendmails() {
-        session.loggedUsername = (SecurityContextHolder.context.authentication.principal as User).username
+        session.loggedUser = SecurityContextHolder.context.authentication.principal as User
         session.recipients = params.checkMail.findAll {it.value}.keySet()
         redirect(url: "/newsletter")
     }

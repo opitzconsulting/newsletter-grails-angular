@@ -10,8 +10,12 @@ class ApiController {
         render(Customer.read(id) as JSON)
     }
 
+    def user() {
+        render(session.loggedUser as JSON)
+    }
+
     def recipients() {
-        def result = [username: session.loggedUsername, customers: session.recipients.collect {Customer.read(it)}] as JSON
+        def result = [security: session.loggedUser, customers: session.recipients.collect {Customer.read(it)}] as JSON
         render result
     }
 }
