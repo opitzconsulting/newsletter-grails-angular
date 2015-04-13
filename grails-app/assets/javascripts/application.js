@@ -2,12 +2,10 @@
 //
 // Any JavaScript file within this directory can be referenced here using a relative path.
 //
-// You're free to add application-wide JavaScript to this file, but it's generally better 
+// You're free to add application-wide JavaScript to this file, but it's generally better
 // to create separate JavaScript files as needed.
 //
 //= require jquery-2.1.3.js
-<<<<<<< Updated upstream
-=======
 //= require bootstrap
 //= require nga/bower_components/angular/angular
 //= require nga/bower_components/angular-resource/angular-resource
@@ -24,7 +22,6 @@
 //= require nga/newsletter/newsletter
 //= require nga/components/directives
 //= require nga/app
->>>>>>> Stashed changes
 //= require_tree .
 //= require_self (1)
 
