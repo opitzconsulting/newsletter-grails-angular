@@ -7,21 +7,21 @@
 //
 //= require jquery-2.1.3.js
 //= require bootstrap
-//= require app/bower_components/angular/angular
-//= require app/bower_components/angular-resource/angular-resource
-//= require app/bower_components/angular-route/angular-route
-//= require app/bower_components/angularresource/angular-resource
-//= require app/bower_components/showdown/compressed/Showdown
-//= require app/bower_components/codemirror/lib/codemirror
-//= require app/bower_components/codemirror/addon/mode/overlay
-//= require app/bower_components/codemirror/mode/gfm/gfm
-//= require app/bower_components/codemirror/mode/markdown/markdown
-//= require app/lib/angular-markdown-editor/angular-markdown-editor
-//= require app/app
-//= require app/customer/customer
-//= require app/newsletter/newsletter
-//= require app/components/directives
-//= require app/app
+//= require nga/nga/bower_components/angular/angular
+//= require nga/nga/bower_components/angular-resource/angular-resource
+//= require nga/nga/bower_components/angular-route/angular-route
+//= require nga/nga/bower_components/angularresource/angular-resource
+//= require nga/nga/bower_components/showdown/compressed/Showdown
+//= require nga/nga/bower_components/codemirror/lib/codemirror
+//= require nga/nga/bower_components/codemirror/addon/mode/overlay
+//= require nga/nga/bower_components/codemirror/mode/gfm/gfm
+//= require nga/nga/bower_components/codemirror/mode/markdown/markdown
+//= require nga/nga/lib/angular-markdown-editor/angular-markdown-editor
+//= require_tree nga/templates
+//= require nga/nga/customer/customer
+//= require nga/nga/newsletter/newsletter
+//= require nga/nga/components/directives
+//= require nga/nga/app
 //= require_tree .
 //= require_self
 
