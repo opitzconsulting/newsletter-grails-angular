@@ -21,5 +21,13 @@ angular.module('angularApp.app.newsletter', ['ngRoute'])
 
 
         //TODO load Markdown-newsletter
-        $scope.markdownData = '#Title \n * list element 1 \n * list element 2 \n\n **This is bold**';
+        $scope.markdownData = '#Title \n' +
+        ' * list element 1 \n' +
+        ' * list element 2 \n\n' +
+        '> A blockquote \n\n' +
+        ' **This is bold**';
+        $scope.editorOptions = {
+            lineNumbers: false
+        };
+
     }]);

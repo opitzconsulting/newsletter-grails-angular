@@ -1,49 +1,48 @@
-<div class="well">
-    <div class="row">
-        <form class="form-horizontal">
-            <div class="form-group">
-                <label class="col-sm-2 control-label" for="firstname">Firstname</label>
+<div class="row">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="firstname">Firstname</label>
 
-                <div class="col-sm-2">
-                    <input class="form-control form-control-lg" type="text" id="firstname" firstname="firstname"
-                           data-ng-model="customer.firstname" required>
-                </div>
+            <div class="col-sm-2">
+                <input class="form-control form-control-lg" type="text" id="firstname" firstname="firstname"
+                       data-ng-model="customer.firstname" required>
             </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label" for="lastname">Surname</label>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="lastname">Surname</label>
 
-                <div class="col-sm-2">
-                    <input class="form-control form-control-lg" type="text" id="lastname" name="lastname"
-                           data-ng-model="customer.lastname">
-                </div>
+            <div class="col-sm-2">
+                <input class="form-control form-control-lg" type="text" id="lastname" name="lastname"
+                       data-ng-model="customer.lastname">
             </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label" for="email">eMail</label>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="email">eMail</label>
 
-                <div class="col-sm-2">
-                    <input class="form-control form-control-lg" type="email" id="email" name="email"
-                           data-ng-model="customer.email">
-                </div>
+            <div class="col-sm-2">
+                <input class="form-control form-control-lg" type="email" id="email" name="email"
+                       data-ng-model="customer.email">
             </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label" for="phone">Phone</label>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="phone">Phone</label>
 
-                <div class="col-sm-2">
-                    <input class="form-control form-control-lg" type="text" id="phone" name="phone"
-                           data-ng-model="customer.phone">
-                </div>
+            <div class="col-sm-2">
+                <input class="form-control form-control-lg" type="text" id="phone" name="phone"
+                       data-ng-model="customer.phone">
             </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label" for="address">Address</label>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="address">Address</label>
 
-                <div class="col-sm-2">
+            <div class="col-sm-2">
                     <textarea class="form-control form-control-lg" id="address" name="address"
-                           data-ng-model="customer.phone"></textarea>
-                </div>
+                              data-ng-model="customer.phone"></textarea>
             </div>
+        </div>
 
-           <div edit-buttons></div>
+        <hr>
+        <div edit-buttons></div>
 
-        </form>
-    </div>
+    </form>
 </div>
