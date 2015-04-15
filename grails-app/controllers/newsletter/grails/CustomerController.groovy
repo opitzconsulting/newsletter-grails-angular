@@ -14,7 +14,7 @@ class CustomerController {
     }
 
     def show(Customer customer) {
-        respond customer
+        render(view: '/angular')
     }
 
     def sendmails() {
