@@ -10,19 +10,19 @@ angular.module('angularApp.app.customer', ['ngRoute'])
     }])
 
     .factory('Customer', ['$resource', function($resource) {
-        return $resource('/api/customer/:custId');
+        return $resource('/api/customer/:custId', null,
+            {
+                'update': {method: 'PUT'}
+            });
     }])
 
     .controller('CustomerCtrl', ['$resource', '$scope', '$routeParams', 'Customer', function ($resource, $scope, $routeParams, Customer) {
-
-        $scope.customer = Customer.get({custId: $routeParams.custId}, function () {});
+        $scope.customer = Customer.get({custId: $routeParams.custId});
         
         $scope.save = function () {
-            //TODO implement save method for customers
-        };
-
-        $scope.remove = function () {
-            //TODO implement delete method for customers
+            Customer.update({custId: $scope.customer.id}, $scope.customer, function (response) {
+                $scope.customer = response;
+            })
         };
 
     }]);

@@ -36,7 +36,7 @@ class ApiController {
          }
     }
 
-    def user() {
+    def loggedUser() {
         render(session.loggedUser as JSON)
     }
 

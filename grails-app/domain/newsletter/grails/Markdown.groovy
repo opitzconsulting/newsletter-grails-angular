@@ -5,7 +5,7 @@ import grails.rest.Resource
 @Resource(uri='/api/markdown', formats = ['json'])
 class Markdown {
 
-    String text
+    String markdown
 
     static constraints = {
     }

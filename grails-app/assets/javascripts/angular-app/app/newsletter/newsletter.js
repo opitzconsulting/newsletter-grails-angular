@@ -13,18 +13,22 @@ angular.module('angularApp.app.newsletter', ['ngRoute'])
         return $resource('api/recipients');
     }])
 
-    .controller('NewsletterCtrl', ['$scope', 'Recipients', function ($scope, Recipients) {
+    .factory('Newsletter', ['$resource', function ($resource) {
+        return $resource('api/markdown/:markId');
+    }])
+
+    .controller('NewsletterCtrl', ['$scope', 'Recipients', 'Newsletter', function ($scope, Recipients, Newsletter) {
         Recipients.get(function (response) {
             $scope.recipients = response.customers;
         });
 
-        //TODO load Markdown-newsletter
-        $scope.markdownData = '#Newsletter \n' +
-        ' * list element 1 \n' +
-        ' * list element 2 \n\n' +
-        '``This is a code block.``\n\n' +
-        '> A blockquote \n\n' +
-        ' **This is bold**';
+        $scope.markdownData = '#Loading data...';
+        Newsletter.get({markId: 1}, function (response) {
+            $scope.markdownData = response.markdown;
+        }, function(error) {
+            $scope.markdownData = '#Error occured.';
+        });
+
         $scope.editorOptions = {
             lineNumbers: false
         };

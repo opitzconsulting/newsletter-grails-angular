@@ -7,7 +7,7 @@ class BootStrap {
     Customer.findOrSaveWhere(firstname: 'John', lastname: 'Doe', email: 'john.doe@mail.com', phone: '01577123456', address: 'Examplestreet 3, 73978 Berrignton')
     Customer.findOrSaveWhere(firstname: 'Oli', lastname: 'Wagner', email: 'oli@wagner.com', phone: '0173123456', address: 'Examplestreet 3, 73978 Berrignton')
     Customer.findOrSaveWhere(firstname: 'Sarah', lastname: 'Schmitz', email: 'sarahschm@company.com', phone: '015877123456', address: 'Examplestreet 3, 73978 Berrignton') 
-    Markdown.findOrSaveWhere(text: '#Newsletter   * list element 1   * list element 2  ``This is a code block.`` > A blockquote   **This is bold**')
+    Markdown.findOrSaveWhere(markdown: '#Newsletter \n * list element 1 \n * list element 2  \n\n ``This is a code block.`` \n\n > A blockquote  \n\n **This is bold**')
     }
     def destroy = {
     }

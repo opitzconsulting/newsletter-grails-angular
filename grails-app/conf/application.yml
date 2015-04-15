@@ -110,4 +110,5 @@ environments:
 ---
 security:
     user:
+        name: John
         password: diplom01

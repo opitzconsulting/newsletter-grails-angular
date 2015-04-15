@@ -4,7 +4,7 @@
 angular.module('angularApp.app.directives')
 
     .factory('User', ['$resource', function($resource) {
-        return $resource('/api/user');
+        return $resource('/api/loggedUser');
     }])
 
     .controller('UsernameCtrl', ['$scope', 'User', function($scope, User) {
