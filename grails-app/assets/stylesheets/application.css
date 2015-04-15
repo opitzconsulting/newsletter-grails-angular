@@ -10,5 +10,7 @@
 *= require mobile
 *= require bootstrap
 *= require angular-app/app/bower_components/font-awesome/css/font-awesome.min.css
+*= require angular-app/app/bower_components/codemirror/lib/codemirror
+
 
 */

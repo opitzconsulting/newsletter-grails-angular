@@ -1,30 +1,29 @@
-<div class="well">
-
-    <div class="col-md-2">
-        <div ng-repeat="recipient in recipients">
-            <label>{{recipient.firstname}} {{recipient.lastname}}</label>
-        </div>
-    </div>
-
-    <div class="col-md-10">
-        <div ng-show="!editMode" ng-click="editMode = !editMode">
-            <div ng-bind-markdown="markdownData"></div>
-        </div>
-        <div ng-show="editMode" ng-blur="editMode = !editMode">
-            <textarea ui-markdown-editor="editorOptions" ng-model="markdownData"></textarea>
-            <button type="button" class="btn btn-primary" ng-click="editMode = !editMode">Ok</button>
+<div>
+    <div class="row">
+        <div class="col-md-2 well">
+            <div ng-if="recipients.length < 1">no customers selected</div>
+            <ul class="list-unstyled" ng-repeat="recipient in recipients">
+                <li>{{recipient.firstname}} {{recipient.lastname}}</li>
+            </ul>
         </div>
 
-
-
-        <!--<div class="row">
-            <div class="col-md-6 col-xs-12">
-                <textarea ui-markdown-editor="editorOptions" ng-model="markdownData"></textarea>
-            </div>
-            <div class="col-md-6 col-xs-12">
+        <div class="col-md-8 col-md-offset-1 well">
+            <div ng-show="!editMode" ng-click="editMode = !editMode">
                 <div ng-bind-markdown="markdownData"></div>
             </div>
-        </div>-->
-    </div>
+            <div ng-show="editMode">
+                <textarea ui-markdown-editor="editorOptions" ng-model="markdownData"></textarea>
+            </div>
+        </div>
 
+        <div class="col-md-1">
+            <button ng-show="editMode" type="button" class="btn btn-primary" ng-click="editMode = !editMode">Ok</button>
+            <button ng-show="!editMode" type="button" class="btn btn-primary" ng-click="editMode = !editMode">edit
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <hr>
+        <div edit-buttons></div>
+    </div>
 </div>
