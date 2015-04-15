@@ -9,6 +9,7 @@ import grails.converters.JSON
 class CustomerController {
 
     def index() {
+        session.loggedUser = SecurityContextHolder.context.authentication.principal as User
         respond Customer.list(params), model:[customerCount: Customer.count()]
     }
 
@@ -17,7 +18,6 @@ class CustomerController {
     }
 
     def sendmails() {
-        session.loggedUser = SecurityContextHolder.context.authentication.principal as User
         session.recipients = params.checkMail.findAll {it.value}.keySet()
         redirect(url: "/newsletter")
     }
