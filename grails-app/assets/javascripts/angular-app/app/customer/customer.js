@@ -18,11 +18,11 @@ angular.module('angularApp.app.customer', ['ngRoute'])
         $scope.customer = Customer.get({custId: $routeParams.custId}, function () {});
         
         $scope.save = function () {
-
+            //TODO implement save method for customers
         };
 
         $scope.remove = function () {
-
+            //TODO implement delete method for customers
         };
 
     }]);

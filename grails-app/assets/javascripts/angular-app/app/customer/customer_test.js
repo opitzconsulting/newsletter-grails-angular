@@ -1,8 +1,8 @@
 'use strict';
 
-describe('nga.customer module', function() {
+describe('angularApp.app.customer module', function() {
 
-  beforeEach(module('nga.customer'));
+  beforeEach(module('angularApp.app.customer'));
 
   describe('customer controller', function(){
 

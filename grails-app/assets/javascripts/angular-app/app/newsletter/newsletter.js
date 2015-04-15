@@ -11,7 +11,6 @@ angular.module('angularApp.app.newsletter', ['ngRoute'])
 
     .factory('Recipients', ['$resource', function ($resource) {
         return $resource('api/recipients');
-
     }])
 
     .controller('NewsletterCtrl', ['$scope', 'Recipients', function ($scope, Recipients) {
@@ -19,11 +18,11 @@ angular.module('angularApp.app.newsletter', ['ngRoute'])
             $scope.recipients = response.customers;
         });
 
-
         //TODO load Markdown-newsletter
-        $scope.markdownData = '#Title \n' +
+        $scope.markdownData = '#Newsletter \n' +
         ' * list element 1 \n' +
         ' * list element 2 \n\n' +
+        '``This is a code block.``\n\n' +
         '> A blockquote \n\n' +
         ' **This is bold**';
         $scope.editorOptions = {

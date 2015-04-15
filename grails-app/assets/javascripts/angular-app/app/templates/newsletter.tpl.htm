@@ -1,11 +1,17 @@
 <div>
+
     <div class="row">
-        <div class="col-md-2 well">
-            <div ng-if="recipients.length < 1">no customers selected</div>
-            <ul class="list-unstyled" ng-repeat="recipient in recipients">
-                <li>{{recipient.firstname}} {{recipient.lastname}}</li>
-            </ul>
+        <div class="col-md-2">
+            <div class="well" username></div>
+            <hr>
+            <div class="well">
+                <div ng-if="recipients.length < 1">no customers selected</div>
+                <ul class="list-unstyled" ng-repeat="recipient in recipients">
+                    <li>{{recipient.firstname}} {{recipient.lastname}}</li>
+                </ul>
+            </div>
         </div>
+
 
         <div class="col-md-8 col-md-offset-1 well">
             <div ng-show="!editMode" ng-click="editMode = !editMode">
@@ -22,6 +28,7 @@
             </button>
         </div>
     </div>
+
     <div class="row">
         <hr>
         <div edit-buttons></div>

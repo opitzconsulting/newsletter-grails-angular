@@ -17,4 +17,17 @@ angular.module('angularApp.app.directives', [])
                     }
                 }
             };
-        }]);
+        }])
+
+    .directive('username', ['$window',
+        function ($window) {
+            return {
+                restrict: 'A',
+                templateUrl: 'username.htm',
+                replace: true,
+                transclude: true,
+                controller: 'UsernameCtrl'
+            };
+        }])
+
+;

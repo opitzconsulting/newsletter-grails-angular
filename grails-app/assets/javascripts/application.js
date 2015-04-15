@@ -22,6 +22,7 @@
 //= require angular-app/app/customer/customer
 //= require angular-app/app/newsletter/newsletter
 //= require angular-app/app/components/directives
+//= require angular-app/app/components/username
 //= require_self (1)
 
 

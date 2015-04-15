@@ -1,8 +1,8 @@
 'use strict';
 
-describe('nga.newsletter module', function() {
+describe('angularApp.app.newsletter module', function() {
 
-  beforeEach(module('nga.newsletter'));
+  beforeEach(module('angularApp.app.newsletter'));
 
   describe('newsletter controller', function(){
 
