@@ -21,16 +21,13 @@ angular.module('angularApp.app.newsletter', ['ngRoute'])
         Recipients.get(function (response) {
             $scope.recipients = response.customers;
         });
-
         $scope.markdownData = '#Loading data...';
         Newsletter.get({markId: 1}, function (response) {
             $scope.markdownData = response.markdown;
         }, function(error) {
             $scope.markdownData = '#Error occured.';
         });
-
         $scope.editorOptions = {
             lineNumbers: false
         };
-
     }]);

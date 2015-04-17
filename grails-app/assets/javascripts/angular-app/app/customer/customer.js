@@ -16,7 +16,7 @@ angular.module('angularApp.app.customer', ['ngRoute'])
             });
     }])
 
-    .controller('CustomerCtrl', ['$resource', '$scope', '$routeParams', 'Customer', function ($resource, $scope, $routeParams, Customer) {
+    .controller('CustomerCtrl', ['$scope', '$resource', '$routeParams', 'Customer', function ($scope, $resource, $routeParams, Customer) {
         $scope.customer = Customer.get({custId: $routeParams.custId});
         
         $scope.save = function () {
@@ -24,5 +24,4 @@ angular.module('angularApp.app.customer', ['ngRoute'])
                 $scope.customer = response;
             })
         };
-
     }]);

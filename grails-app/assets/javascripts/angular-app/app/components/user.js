@@ -11,6 +11,4 @@ angular.module('angularApp.app.directives')
         User.get({}, function (response) {
             $scope.username = response.username;
         });
-    }])
-
-;
+    }]);

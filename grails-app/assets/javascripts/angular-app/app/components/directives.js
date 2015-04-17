@@ -28,6 +28,4 @@ angular.module('angularApp.app.directives', [])
                 transclude: true,
                 controller: 'UsernameCtrl'
             };
-        }])
-
-;
+        }]);

@@ -1,19 +1,17 @@
 {
-  "name": "angular-seed",
-  "description": "A starter project for AngularJS",
+  "name": "newsletter-grails-angular",
+  "description": "A demo project to show the integration of Angular and Grails",
   "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
+  "homepage": "https://github.com/opitzconsulting/newsletter-grails-angular",
   "license": "MIT",
   "private": true,
   "dependencies": {
     "angular": "1.2.x",
     "angular-route": "1.2.x",
     "angular-resource": "1.2.x",
-    "angular-loader": "1.2.x",
     "angular-mocks": "~1.2.x",
     "bootstrap": "3.3.x",
     "font-awesome": "4.3.x",
-
     "showdown": "~0.3.1",
     "codemirror": "~3.21.0"
   }
