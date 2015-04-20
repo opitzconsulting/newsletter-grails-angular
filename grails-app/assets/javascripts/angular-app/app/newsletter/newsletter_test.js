@@ -1,36 +1,26 @@
 'use strict';
 
 describe('angularApp.app.newsletter module', function () {
-    var scope, location, resource, route, Recipients, Newsletter;
+    var scope, Recipients, Newsletter;
     var newsletterCtrl;
 
     beforeEach(function () {
         module('angularApp.app');
         module('angularApp.app.newsletter');
-        inject(function ($rootScope, $location, $resource, $route, $q, $controller) {
-            var promiseMock = {
-                get: function () {
-                    var deferred = $q.defer();
-                    return {$promise: deferred.promise};
-                }
-            };
+        inject(function ($rootScope, $controller, _Recipients_, _Newsletter_) {
 
-            var RecipientsMock = angular.copy(promiseMock);
-            spyOn(RecipientsMock, 'get').andCallFake(function () {
+            scope = $rootScope;
+
+            Recipients = _Recipients_;
+            spyOn(_Recipients_, 'get').andCallFake(function() {
                 scope.recipients = [];
             });
 
-            var NewsletterMock = angular.copy(promiseMock);
-            spyOn(NewsletterMock, 'get').andCallFake(function () {
+            Newsletter = _Newsletter_;
+            spyOn(_Newsletter_, 'get').andCallFake(function () {
                 scope.markdown = '#Title';
             });
 
-            scope = $rootScope;
-            location = $location;
-            resource = $resource;
-            route = $route;
-            Newsletter = NewsletterMock;
-            Recipients = RecipientsMock;
             newsletterCtrl = $controller('NewsletterCtrl', {
                 $scope: scope, Recipients: Recipients, Newsletter: Newsletter
             });
