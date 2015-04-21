@@ -1,13 +1,13 @@
+<%@ page import="org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository" %>
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="layout" content="kickstart"><%--TODO: kickstart--%>
-        <g:set var="entityName" value="${message(code: 'customer.label')}" />
-        <title><g:message code="default.list.label" args="[entityName]" /></title>
+        <meta name="layout" content="kickstart">
+        <title><g:message code="customer.list.title" /></title>
     </head>
     <body>
         <section id="list-customer" class="content scaffold-list first" role="main">
-            <h1><g:message code="customer.list.title" args="[entityName]" /></h1>
+            <h2><g:message code="customer.list.title" /></h2>
             <g:if test="${flash.message}">
                 <div class="message" role="status">${flash.message}</div>
             </g:if>
@@ -41,6 +41,7 @@
                     <g:paginate total="${customerCount ?: 0}" />
                 </div>--%>
                 <fieldset class="buttons">
+                    <g:csrfToken />
                     <g:submitButton class="btn btn-default" name="show" value="Create Mailing" />
                     <g:link class="btn btn-default" controller="customer" action="create">Add Recipient</g:link>
                 </fieldset>
