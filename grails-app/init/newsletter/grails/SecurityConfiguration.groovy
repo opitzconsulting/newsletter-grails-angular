@@ -6,9 +6,6 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter
-import org.springframework.security.web.csrf.CsrfFilter
-import org.springframework.security.web.csrf.CsrfTokenRepository
-import org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository;
 
 @Configuration
 @EnableWebSecurity
@@ -17,21 +14,21 @@ class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth
-            .inMemoryAuthentication()
-            .withUser("user").password("pwd").roles("USER");
+                .inMemoryAuthentication()
+                .withUser("user").password("pwd").roles("USER");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-            .authorizeRequests()
+                .authorizeRequests()
                 .antMatchers('/').hasAnyRole('USER')
                 .anyRequest().authenticated()
-            .and()
+                .and()
                 .formLogin().permitAll()
-            .and()
+                .and()
                 .logout().permitAll()
-            .and()
+                .and()
                 .csrf().disable();
     }
 
