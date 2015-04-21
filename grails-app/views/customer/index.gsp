@@ -41,7 +41,8 @@
                     <g:paginate total="${customerCount ?: 0}" />
                 </div>--%>
                 <fieldset class="buttons">
-                    <g:submitButton class="btn btn-default" name="show" value="Send mails" />
+                    <g:submitButton class="btn btn-default" name="show" value="Create Mailing" />
+                    <g:link class="btn btn-default" controller="customer" action="create">Add Recipient</g:link>
                 </fieldset>
             </g:form>
         </section>
