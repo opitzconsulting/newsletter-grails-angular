@@ -1,10 +1,14 @@
 <div>
     <div class="row">
         <div class="col-md-3">
-            <div class="well" username></div>
+            <div class="well">
+                <h3>Sender</h3>
+                <span username/>
+            </div>
             <hr>
             <div class="well">
-                <div ng-if="recipients.length < 1">no customers selected</div>
+                <h3>Recipients</h3>
+                <div ng-if="recipients.length < 1">no recipients selected</div>
                 <ul class="list-unstyled" ng-repeat="recipient in recipients">
                     <li>{{recipient.firstname}} {{recipient.lastname}}</li>
                 </ul>
