@@ -3,7 +3,7 @@ package newsletter.grails
 import grails.transaction.Transactional
 import grails.converters.JSON
 
-@Transactional(readOnly = true)
+@Transactional
 class ApiController {
 
     def customer(Long id) {
