@@ -1,3 +1,7 @@
 .gradle
 build/
 src
+
+/.idea/
+/classes/
+/*.iml
