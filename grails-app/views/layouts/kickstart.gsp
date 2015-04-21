@@ -15,6 +15,16 @@
 </head>
 <body>
 	<g:render template="/layouts/header"/>														
-	<g:render template="/layouts/content"/>														
+	<g:render template="/layouts/content"/>
+
+<footer class="footer">
+	<hr/>
+	<div class="container" style="margin-bottom: 20px">
+	<form action="/logout" method="post" class="pull-right">
+		<g:csrfToken/>
+		<button class="btn btn-sm btn-default">Logout</button>
+	</form>
+	</div>
+</footer>
 </body>
 </html>
