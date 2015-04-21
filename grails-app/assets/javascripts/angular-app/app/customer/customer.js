@@ -16,7 +16,8 @@ angular.module('angularApp.app.customer', ['ngRoute'])
             });
     }])
 
-    .controller('CustomerCtrl', ['$scope', '$resource', '$routeParams', 'Customer', 'notifications', function ($scope, $resource, $routeParams, Customer, notifications) {
+    .controller('CustomerCtrl', ['$scope', '$resource', '$routeParams', 'Customer', 'notifications',
+        function ($scope, $resource, $routeParams, Customer, notifications) {
         $scope.notifications = notifications;
         $scope.customer = Customer.get({custId: $routeParams.custId});
         
@@ -27,5 +28,9 @@ angular.module('angularApp.app.customer', ['ngRoute'])
             }, function (error) {
                 notifications.pushForCurrentRoute('An error occurred!', 'error');
             })
+        };
+
+        $scope.viewBack = function () {
+            window.location = '/';
         };
     }]);

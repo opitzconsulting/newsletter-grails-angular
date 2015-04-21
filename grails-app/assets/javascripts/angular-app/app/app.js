@@ -15,6 +15,6 @@ angular.module('angularApp.app', [
     }])
 
     .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.otherwise({redirectTo: '/newsletter'});
+        $routeProvider.otherwise({redirectTo: '/customer'});
     }])
 ;
