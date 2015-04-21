@@ -16,12 +16,16 @@ angular.module('angularApp.app.customer', ['ngRoute'])
             });
     }])
 
-    .controller('CustomerCtrl', ['$scope', '$resource', '$routeParams', 'Customer', function ($scope, $resource, $routeParams, Customer) {
+    .controller('CustomerCtrl', ['$scope', '$resource', '$routeParams', 'Customer', 'notifications', function ($scope, $resource, $routeParams, Customer, notifications) {
+        $scope.notifications = notifications;
         $scope.customer = Customer.get({custId: $routeParams.custId});
         
         $scope.save = function () {
             Customer.update({custId: $scope.customer.id}, $scope.customer, function (response) {
+                notifications.pushForCurrentRoute('Saved successfully!', 'success');
                 $scope.customer = response;
+            }, function (error) {
+                notifications.pushForCurrentRoute('An error occurred!', 'error');
             })
         };
     }]);

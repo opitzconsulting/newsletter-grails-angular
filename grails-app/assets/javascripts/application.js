@@ -16,12 +16,13 @@
 //= require angular-app/app/bower_components/codemirror/addon/mode/overlay
 //= require angular-app/app/bower_components/codemirror/mode/gfm/gfm
 //= require angular-app/app/bower_components/codemirror/mode/markdown/markdown
-//= require angular-app/app/lib/angular-markdown-editor/angular-markdown-editor
+//= require angular-app/app/bower_components/angular-markdown-editor/angular-markdown-editor
 //= require angular-app/app/app
 //= require_tree angular-app/app/templates
 //= require angular-app/app/customer/customer
 //= require angular-app/app/newsletter/newsletter
 //= require angular-app/app/components/directives
+//= require angular-app/app/components/notifications
 //= require angular-app/app/components/user
 //= require_self (1)
 

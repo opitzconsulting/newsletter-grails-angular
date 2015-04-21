@@ -6,6 +6,7 @@ angular.module('angularApp.app', [
     'angularApp.app.customer',
     'angularApp.app.newsletter',
     'angularApp.app.directives',
+    'angularApp.app.notifications',
     'ui.markdown'
     ])
 

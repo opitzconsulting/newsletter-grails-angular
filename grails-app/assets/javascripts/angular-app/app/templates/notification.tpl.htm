@@ -1,0 +1,10 @@
+<div style="position: absolute; top: 1px; right: 30px; left: 30px; z-index: 10;">
+    <div data-ng-class="['alert', 'alert-'+notification.type, notification.type === 'success' ? 'notification' : '']"
+         data-ng-repeat="notification in notifications.getCurrent()">
+        <button class="close" data-ng-click="removeNotification(notification)">x</button>
+        {{notification.message}}
+        <ul data-ng-show="notification.details">
+            <li data-ng-repeat="detail in notification.details">{{detail}}</li>
+        </ul>
+    </div>
+</div>

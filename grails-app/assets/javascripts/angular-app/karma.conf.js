@@ -9,7 +9,7 @@ module.exports = function(config){
       'app/bower_components/angular-mocks/angular-mocks.js',
       'app/bower_components/angular-resource/angular-resource.js',
       'app/bower_components/codemirror/lib/codemirror.js',
-      'app/lib/angular-markdown-editor/angular-markdown-editor.js',
+      'app/bower_components/angular-markdown-editor/angular-markdown-editor.js',
       'app/app.js',
       'app/components/**/*.js',
       'app/newsletter/*.js',
