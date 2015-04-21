@@ -37,11 +37,11 @@ class ApiController {
     }
 
     def loggedUser() {
-        render(session.loggedUser as JSON)
+        render(session.currentUser as JSON)
     }
 
     def recipients() {
-        def result = [security: session.loggedUser, customers: session.recipients.collect {Customer.read(it)}] as JSON
+        def result = [security: session.currentUser, customers: session.recipients.collect {Customer.read(it)}] as JSON
         render result
     }
 
@@ -49,4 +49,5 @@ class ApiController {
         response.status = code
         render([error: message] as JSON)
     }
+
 }

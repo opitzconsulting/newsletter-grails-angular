@@ -1,3 +1,7 @@
-// Place your Spring DSL code here
+import newsletter.grails.SecurityConfiguration
+
 beans = {
+
+	webSecurityConfiguration(SecurityConfiguration)
+
 }

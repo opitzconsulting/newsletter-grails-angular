@@ -9,7 +9,8 @@ import grails.converters.JSON
 class CustomerController {
 
     def index() {
-        session.loggedUser = SecurityContextHolder.context.authentication.principal as User
+        session.currentUser = SecurityContextHolder.context.authentication.principal as User
+        println "Currently logged in user: ${session.currentUser}"
         respond Customer.list(params), model:[customerCount: Customer.count()]
     }
 
