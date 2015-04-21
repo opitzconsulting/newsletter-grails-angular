@@ -10,6 +10,10 @@ import javax.servlet.http.Cookie
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 
+/**
+ * This filter is used to serve the CSRF token to the AngularJS application with the help of a cookie. AngularJS
+ * expects a cookie with the name 'CSRF-TOKEN' to look up the token and send it back in following calls.
+ */
 class CsrfHeaderFilter extends OncePerRequestFilter {
 
     @Override
