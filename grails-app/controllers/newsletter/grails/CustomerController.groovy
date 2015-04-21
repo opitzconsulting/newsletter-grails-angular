@@ -18,6 +18,10 @@ class CustomerController {
         render(view: '/angular')
     }
 
+    def create() {
+        render(view: '/angular')
+    }
+
     def sendmails() {
         session.recipients = params.checkMail.findAll {it.value}.keySet()
         redirect(url: "/newsletter")
