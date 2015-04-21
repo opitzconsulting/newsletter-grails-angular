@@ -7,7 +7,7 @@
     </head>
     <body>
         <section id="list-customer" class="content scaffold-list first" role="main">
-            <h1><g:message code="default.list.label" args="[entityName]" /></h1>
+            <h1><g:message code="customer.list.title" args="[entityName]" /></h1>
             <g:if test="${flash.message}">
                 <div class="message" role="status">${flash.message}</div>
             </g:if>
